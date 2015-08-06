@@ -5,3 +5,5 @@ export default {
     this.route('purple-tentacle');
   }
 };
+
+

@@ -1,7 +1,6 @@
 export default Ember.ArrayController.extend({
-	enabled: false,
-
-		actions: {
+	actions: {
+		
 		showTentacle() {
 			var self = this;
 			self.set('tentacleVisible', true);
@@ -10,7 +9,6 @@ export default Ember.ArrayController.extend({
 		hideTentacle() {
 			var self = this;
 			self.set('tentacleVisible', false);
-		},
-		
+		},		
 	}	
 });

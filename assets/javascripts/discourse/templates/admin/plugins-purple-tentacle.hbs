@@ -2,14 +2,12 @@
   <div class='tentacle'>
     <img src="http://eviltrout.com/images/tentacle.gif">
   </div>
-
-  <div class='buttons'>
-  	{{d-button class="toggle" label="purple_tentacle.hide" action="hideTentacle" icon="eye" target="view"}}
-	</div>
 {{/if}}
 
-{{#unless tentacleVisible}}
-	<div class='buttons'>
+<div class='buttons'>
+	{{#if tentacleVisible}}
+  	{{d-button class="toggle" label="purple_tentacle.hide" action="hideTentacle" icon="eye" target="view"}}
+  {{else}}
 	  {{d-button label="purple_tentacle.show" action="showTentacle" icon="eye" target="view"}}
-	</div>
-{{/unless}}
+	{{/if}}
+</div>

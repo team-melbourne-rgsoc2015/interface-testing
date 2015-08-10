@@ -1,0 +1,24 @@
+<div class="container">
+  <img src="https://www.dropbox.com/sc/dgqnxmkrsgaktcu/AABTbGricIVRAqcIU-fE0f5La?dl=1">
+
+
+{{#if adVisible}}
+  <div class='adPreview'>
+	<div class="ad-preview-container"></div>
+  </div>
+{{/if}}
+
+
+
+
+<div class='buttons'>
+	{{#if adVisible}}
+  	{{d-button class="toggle" label="ad_preview.hide" action="hideAd" icon="eye" target="view"}}
+  {{else}}
+	  {{d-button label="ad_preview.show" action="showAd" icon="eye" target="view"}}
+	{{/if}}
+</div>
+
+<img src="https://www.dropbox.com/sc/ljb753islr74ib3/AADXbifzBsMv4GiMT8YtZ389a?dl=1">
+
+</div>

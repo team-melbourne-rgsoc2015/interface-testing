@@ -1,15 +1,22 @@
+{{#admin-nav}}
+  {{nav-item route='' label='Homepage'}}
+  {{nav-item route='' label='Posts Page Top'}}
+  {{nav-item route='' label='Inbetween Posts'}}
+  {{nav-item route='' label='Posts Page Bottom'}}
+{{/admin-nav}}
+
 <div class="container">
+
+{{!-- {{This should change based on the route?}} --}}
+
   <div class="background-display-one"></div>
-
-
-{{#if adVisible}}
-  <div class='adPreview' align = center>
-	<div class="ad-preview-container" style='width:{{ad_width}}px; height:{{ad_height}}px;'></div>
-  </div>
-{{/if}}
-
-
-
+  {{#if adVisible}}
+    <div class='adPreview' align = center>
+    	<div class="ad-preview-container" style='width:{{ad_width}}px; height:{{ad_height}}px;'>
+        CREATE NEW AD BUTTON SHOULD GO HERE
+      </div>
+    </div>
+  {{/if}}
 
 <div class='buttons'>
 	{{#if adVisible}}
@@ -20,5 +27,7 @@
 </div>
 
   <div class="background-display-two"></div>
+
+{{!-- {{end of this section}} --}}
 
 </div>

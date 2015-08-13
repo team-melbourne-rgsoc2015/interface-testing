@@ -7,24 +7,28 @@
 
 <div class="container">
 
+{{!-- {{Look at user fields and decide on routes that we would need to set this all up}} --}}
+
 {{!-- {{This should change based on the route?}} --}}
 
   <div class="background-display-one"></div>
   {{#if adVisible}}
     <div class='adPreview' align = center>
     	<div class="ad-preview-container" style='width:{{ad_width}}px; height:{{ad_height}}px;'>
-        CREATE NEW AD BUTTON SHOULD GO HERE
+        {{d-button disable=createDisabled class="btn-primary" action="createAd" label="Add Ad Code Here" icon="plus"}}
       </div>
     </div>
   {{/if}}
+  <div align = center>
+    <div class='buttons'>
+      {{#if adVisible}}
+        {{d-button class="toggle" label="ad_preview.hide" action="hideAd" icon="eye" target="view"}}
+      {{else}}
+        {{d-button class="btn-primary" label="ad_preview.show" action="showAd" icon="eye" target="view"}}
+      {{/if}}
+    </div>
+  </div>
 
-<div class='buttons'>
-	{{#if adVisible}}
-  	{{d-button class="toggle" label="ad_preview.hide" action="hideAd" icon="eye" target="view"}}
-  {{else}}
-	  {{d-button label="ad_preview.show" action="showAd" icon="eye" target="view"}}
-	{{/if}}
-</div>
 
   <div class="background-display-two"></div>
 

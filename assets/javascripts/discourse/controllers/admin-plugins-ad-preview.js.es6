@@ -15,6 +15,10 @@ export default Ember.Controller.extend({
     hideAd() {
 		var self = this;
 		self.set('adVisible', false);
-	},		
+	  },
+
+    inputAd(adcode) {
+      this.pushObject(Em.Object.create(adcode));
+    }
   }
 });

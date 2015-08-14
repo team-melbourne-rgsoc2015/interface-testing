@@ -1,19 +1,19 @@
-# name: ad-preview
+# name: ad-plugin
 # about: A sample plugin showing how to add a plugin route
 # version: 0.1
 # authors: Robin Ward
 # url: https://github.com/discourse/purple-tentacle
 
-add_admin_route 'ad_preview.title', 'ad-preview'
+add_admin_route 'ad_plugin.title', 'ad-plugin'
 
 Discourse::Application.routes.append do
-  get '/admin/plugins/ad-preview' => 'admin/plugins#index', constraints: StaffConstraint.new
+  get '/admin/plugins/ad-plugin' => 'admin/plugins#index', constraints: StaffConstraint.new
 end
 
 
 register_css <<CSS
 
-.ad-preview-container {
+.ad-plugin-container {
   padding: 3px;
   border: 6px solid #000000; 
 }

@@ -1,7 +1,7 @@
 en:
   js:
-    ad_preview:
-      title: "Ad Preview"
+    ad_plugin:
+      title: "Ad Plugin"
       show: "Show Ad Preview"
       hide: "Hide Ad Preview"
 

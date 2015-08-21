@@ -1,8 +1,8 @@
 {{#admin-nav}}
-  {{nav-item route='' label='Homepage'}}
-  {{nav-item route='' label='Posts Page Top'}}
-  {{nav-item route='' label='Inbetween Posts'}}
-  {{nav-item route='' label='Posts Page Bottom'}}
+  {{nav-item route='adminPlugins.ad-plugin.homepage' label='Homepage'}}
+  {{nav-item route='adminPlugins.ad-plugin.posts-page-top' label='Posts Page Top'}}
+  {{nav-item route='adminPlugins.ad-plugin.inbetween-posts' label='Inbetween Posts'}}
+  {{nav-item route='adminPlugins.ad-plugin.posts-page-bottom' label='Posts Page Bottom'}}
 {{/admin-nav}}
 
 <div class="container">
@@ -11,27 +11,8 @@
 
 {{!-- {{This should change based on the route?}} --}}
 
-  <div class="background-display-one"></div>
-  {{#if adVisible}}
-    <div class='adPlugin' align = center>
-    	<div class="ad-plugin-container" style='width:{{ad_width}}px; height:{{ad_height}}px;'>
-        {{d-button disable=createDisabled class="btn-primary" action="createAd" label="Add Ad Code Here" icon="plus"}}
-      </div>
-    </div>
-  {{/if}}
-  <div align = center>
-    <div class='buttons'>
-      {{#if adVisible}}
-        {{d-button class="toggle" label="ad_plugin.hide" action="hideAd" icon="eye" target="view"}}
-      {{else}}
-        {{d-button class="btn-primary" label="ad_plugin.show" action="showAd" icon="eye" target="view"}}
-      {{/if}}
-    </div>
-  </div>
-
-
-  <div class="background-display-two"></div>
-
-{{!-- {{end of this section}} --}}
+<div class="admin-container">
+  {{outlet}}
+</div>
 
 </div>

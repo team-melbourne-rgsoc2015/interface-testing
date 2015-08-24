@@ -1,6 +1,8 @@
 var ad_width = 300 * .76;
 var ad_height = 250 * .76;
 
+console.log(name);
+
 export default Ember.Controller.extend({
   adVisible: false,
 

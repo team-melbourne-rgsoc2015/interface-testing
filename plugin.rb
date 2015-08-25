@@ -4,10 +4,19 @@
 # authors: Robin Ward
 # url: https://github.com/discourse/purple-tentacle
 
+#add_admin_route 'ad_plugin.title', 'ad-plugin'
+
+#Discourse::Application.routes.append do
+#  mount ::DiscourseAdPlugin::Engine, at: '/admin/plugins/ad-plugin'
+#   get '/admin/plugins/ad-plugin' => 'admin/plugins#index'
+
+#end
+
 add_admin_route 'ad_plugin.title', 'ad-plugin'
 
 Discourse::Application.routes.append do
-  mount ::DiscourseAdPlugin::Engine, at: '/admin/plugins/ad-plugin'
+  get '/admin/plugins/ad-plugin' => 'admin/plugins#index'
+  get '/admin/plugins/ad-plugin/dfp' => '/admin/plugins/ad-plugin#dfp'
 end
 
 

@@ -15,8 +15,7 @@
 add_admin_route 'ad_plugin.title', 'ad-plugin'
 
 Discourse::Application.routes.append do
-  get '/admin/plugins/ad-plugin' => 'admin/plugins#index'
-  get '/admin/plugins/ad-plugin/dfp' => '/admin/plugins/ad-plugin#dfp'
+  get '/admin/plugins/ad-plugin' => 'admin/plugins#index', constraints: StaffConstraint.new
 end
 
 
